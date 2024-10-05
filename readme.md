@@ -24,7 +24,7 @@ TypeScript
 ## API連携  
 
 Backlog API  
-ChatGPT API(これから予定)  
+OpenAI API(これから予定)  
   
 ## Powered By  
 
