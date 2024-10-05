@@ -1,0 +1,19 @@
+# Dockerfile
+# ベースイメージとしてNode.jsを使用
+FROM node:16-alpine
+
+# 作業ディレクトリを設定
+WORKDIR /app
+
+# パッケージファイルをコピーして依存関係をインストール
+COPY package.json package-lock.json ./
+RUN npm install
+
+# ソースコードをコピー
+COPY . .
+
+# 開発サーバーを起動
+CMD ["npm", "start"]
+
+# ポート3000で動作
+EXPOSE 3000
